@@ -1,3 +1,11 @@
+<div align="center">
+
+_DISCLAIMER_
+
+_I am no expert, this is just how I've done things before!_
+
+</div>
+
 ### [:floppy_disk: DatabaseConfig](#DatabaseConfig)
 
 ### [:gem: Favourite Gems](https://github.com/arthurfincham/sinatra2rails/blob/main/gems.md)
