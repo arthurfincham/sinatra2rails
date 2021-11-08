@@ -14,7 +14,7 @@ And **with** the gem:
 
 ## [devise](https://github.com/heartcombo/devise)
 
-This gem does pretty much everything to do with authentication for you (including setting up DB and views) - I have a feeling that we should do this from scratch for this project(acebook)... but if you need to do it in future this gem is v helpful!
+This gem does pretty much everything to do with authentication for you (including setting up DB and views) - I have a feeling that we should do this from scratch for this project (acebook)... but if you need to do it in future this gem is v helpful!
 
 ## [simple-form](https://github.com/heartcombo/simple_form)
 
