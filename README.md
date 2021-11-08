@@ -31,15 +31,15 @@ let's take the first route as an example.
 ```ruby
 # sinatra_repo/app.rb
 ```
-[Rails Routes](#routing)
+[Rails Routes](#Routing)
 ```ruby
 get '/spaces' do
 ```
-[Rails Controller](#controller)
+[Rails Controller](#Controller)
 ```ruby
   @spaces = Space.all
 ```
-[Rails Views](#views)
+[Rails Views](#Views)
 ```ruby
   erb :'spaces/all'
 ```
@@ -61,7 +61,7 @@ and then a folder for the views:
 
 In Sinatra, we link the views with `erb :'spaces/all'` etc... but in Rails we create a file inside the spaces folder called `index.html.erb` (and the equivalent for _new_, etc).
 
-## [Rails Routes](#routing)
+## Routing
 
 ```ruby
 # sinatra_repo/app.rb
@@ -82,7 +82,7 @@ end
 
 Now there aren't any strings of routes in here - what `resources` does is create a route for each method in `spaces_controller.rb`.
 
-## [Rails Controller](#controller)
+## Controller
 
 ```ruby
 # sinatra_repo/app.rb
@@ -152,7 +152,7 @@ end
 So our Controller effectively defines which data the Model should feed into the Views, and then our `routes.rb` file actually creates the routes for these views.
 
 
-## [Rails Views](#views)
+## Views
 
 ```ruby
 # sinatra_repo/app.rb
