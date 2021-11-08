@@ -1,7 +1,7 @@
 So this is a very basic Sinatra app...
 
 ```ruby
-#sinatra/app.rb
+# sinatra_repo/app.rb
 class MakersBNB < Sinatra::Base
 
   get '/spaces' do
@@ -25,18 +25,29 @@ end
 ```
 
 let's take the first route as an example.
+
+#### The blue links below each of the following Sinatra lines go to their Rails equivalent!
+
 ```ruby
-#sinatra/app.rb
-...
-
-get '/spaces' do
-  @spaces = Space.all
-
-  erb :'spaces/all'
-end
-
-...
+# sinatra_repo/app.rb
 ```
+[Rails Routes](#routing)
+```ruby
+get '/spaces' do
+```
+[Rails Controller](#controller)
+```ruby
+  @spaces = Space.all
+```
+[Rails Views](#views)
+```ruby
+  erb :'spaces/all'
+```
+```ruby
+end
+```
+
+## Conventions for a model/class in Rails
 
 In Rails the Model, Views and Controllers are connected by **naming convention**. So for `Space` we will have the following files:
 
@@ -50,48 +61,38 @@ and then a folder for the views:
 
 In Sinatra, we link the views with `erb :'spaces/all'` etc... but in Rails we create a file inside the spaces folder called `index.html.erb` (and the equivalent for _new_, etc).
 
+## [Rails Routes](https://github.com/arthurfincham/sinatra2rails#routing)
+
 ```ruby
-# sinatra/app.rb
-...
+# sinatra_repo/app.rb
 
 get '/spaces/' do
-  @spaces = Space.all
-
-  erb :'spaces/all' # DONE
-end
-
-...
 ```
 
-Next, for the routing... in Sinatra we use get `get '/spaces/' do` but in Rails, we go to another file: `./config/routes.rb`.
+For the routing... in Sinatra we use get `get '/spaces/' do` but in Rails, we go to another file: `./config/routes.rb`.
 
 The file looks like this:
 ```ruby
-# rails_app/config/routes.rb
+# rails_repo/config/routes.rb
 
 Rails.application.routes.draw do
   resources :spaces
 end
 ```
 
-Now there aren't any strings of routes in here - what `resources` does is create a route for each method in `spaces_controller.rb` (will come to this in a second)
+Now there aren't any strings of routes in here - what `resources` does is create a route for each method in `spaces_controller.rb`.
+
+## [Rails Controller](https://github.com/arthurfincham/sinatra2rails#controller)
 
 ```ruby
-# sinatra/app.rb
-...
+# sinatra_repo/app.rb
 
-get '/spaces' do # DONE
   @spaces = Space.all
-
-  erb :'spaces/all' # DONE
-end
-
-...
 ```
 
 On to the controller...
 ```ruby
-# rails_app/app/controllers/spaces_controller.rb
+# rails_repo/app/controllers/spaces_controller.rb
 
 class SpacesController < ApplicationController
 
@@ -104,25 +105,12 @@ end
 
 First point is that `index` is the default here - it is the equivalent of `/spaces`.
 
-In `routes.rb`, a route is now established between our model and our view. If we then call `@spaces` in our view, it will take all of the Spaces from our database.
-
-```ruby
-# sinatra/app.rb
-...
-
-get '/spaces' do # DONE
-  @spaces = Space.all # DONE
-
-  erb :'spaces/all' # DONE
-end
-
-...
-```
+So the index method above will set the variable `@spaces` to `Space.all` for the index page only (which is _https://example.com/spaces_).
 
 Now let's add the other methods that were routed in our Sinatra app.
 
 ```ruby
-# rails_app/app/controllers/spaces_controller.rb
+# rails_repo/app/controllers/spaces_controller.rb
 
 class SpacesController < ApplicationController
 
@@ -162,5 +150,23 @@ end
 ```
 
 So our Controller effectively defines which data the Model should feed into the Views, and then our `routes.rb` file actually creates the routes for these views.
+
+
+## [Rails Views](https://github.com/arthurfincham/sinatra2rails#views)
+
+```ruby
+# sinatra_repo/app.rb
+
+  erb :'spaces/all'
+```
+
+In Rails we'll use erb like we did in Sinatra - only difference is that the file is located within a folder that relates to the controller name.
+
+So if we want our URL to be _https://example.com/spaces_, we have a file `rails_repo/app/views/spaces/index.html.erb`.
+
+For anything other than index, the file name should match the end of the url.
+
+For example the view for _https://example.com/spaces/new_ can be found in `rails_repo/app/views/spaces/new.html.erb`
+
 
 
