@@ -1,6 +1,6 @@
 # :gem: My Favourite Gems :gem:
 
-### [awesome-print](https://github.com/awesome-print/awesome_print)
+## [awesome-print](gems.md)
 
 Soo helpful when doing stuff in irb and interacting with our objects from the database.
 
@@ -12,11 +12,11 @@ And **with** the gem:
 
 <img src="images/ap.png" width="400">
 
-### [devise](https://github.com/heartcombo/devise)
+## [devise](https://github.com/heartcombo/devise)
 
 This gem does pretty much everything to do with authentication for you (including setting up DB and views) - I have a feeling that the coaches want us to do this from scratch though... but if you need to do it in future this is a must have.
 
-### [simple-form](https://github.com/heartcombo/simple_form)
+## [simple-form](https://github.com/heartcombo/simple_form)
 
 Makes creating forms in Rails a bit easier... 
 
@@ -41,7 +41,7 @@ and **with** the gem:
 <% end %>
 ```
 
-### [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)
+## [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)
 
 You guys may be familiar with this from previous projects, it extends the ways in which you can expect things in RSpec...
 
@@ -59,6 +59,6 @@ RSpec.describe MenuItem, type: :model do
 end
 ```
 
-### [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on)
+## [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on)
 
 I first used this before we'd done tags in the Chitter challenge - it effectively has the same result but does a lot of the work for you.
