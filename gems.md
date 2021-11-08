@@ -1,4 +1,4 @@
-Here are my favorite gems:
+# :gem: My Favourite Gems :gem:
 
 ### [awesome-print](https://github.com/awesome-print/awesome_print)
 
