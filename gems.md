@@ -14,7 +14,7 @@ And **with** the gem:
 
 ## [devise](https://github.com/heartcombo/devise)
 
-This gem does pretty much everything to do with authentication for you (including setting up DB and views) - I have a feeling that the coaches want us to do this from scratch though... but if you need to do it in future this is a must have.
+This gem does pretty much everything to do with authentication for you (including setting up DB and views) - I have a feeling that we should do this from scratch for this project(acebook)... but if you need to do it in future this gem is v helpful!
 
 ## [simple-form](https://github.com/heartcombo/simple_form)
 
@@ -23,20 +23,20 @@ Makes creating forms in Rails a bit easier...
 Form **without** the gem:
 
 ```ruby
-<%= form_for @user, :url => { :action => "create" } do |f| %>
-  <label>username</label>
-  <%= f.text_field :username %>
-  <label>password</label>
-  <%= f.select :password %>
-  <%= f.submit "Submit" %>
-<% end %>
+<%= form_for @user do |f| %>
+  <%= f.label :username %><br>
+  <%= f.text_field :username%><br>
+  <%= f.label :password%><br>
+  <%= f.password_field :password%><br>
+  <%= f.submit %>
+<%end%>
 ```
 
 and **with** the gem:
 ```ruby
 <%= simple_form_for @user do |f| %>
-  <%= f.input :username %>
-  <%= f.input :password %>
+  <%= f.input :username, label: 'Username' %>
+  <%= f.input :password, label: 'Password' %>
   <%= f.button :submit %>
 <% end %>
 ```
