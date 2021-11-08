@@ -1,8 +1,8 @@
-[Link to Database set up](#DatabaseConfig)
+### [:floppy_disk: DatabaseConfig](#DatabaseConfig)
 
-[Link to list of nice gems]()
+### [:gem: Favourite Gems](https://github.com/arthurfincham/sinatra2rails/blob/main/gems.md)
 
-So this is a very basic Sinatra app...
+#### So this is a very basic Sinatra app...
 
 ```ruby
 # sinatra_repo/app.rb
