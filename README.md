@@ -38,7 +38,7 @@ end
 
 let's take the first route as an example.
 
-#### The blue links below each of the following Sinatra lines go to their Rails equivalent!
+#### The blue links above each of the following Sinatra lines go to their Rails equivalent!
 
 ```ruby
 # sinatra_repo/app.rb
@@ -221,7 +221,7 @@ I actually think that this is **way** easier in Rails.
 
 Normally I do it like this.
 ```bash
-% rails g migration CreateSpacesTable
+% rails g model Space
 ```
 
 This will create a migration file:
